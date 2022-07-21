@@ -38,15 +38,16 @@ height: 72px;
 
 .Conteudo {
     margin-bottom: 48px;
-    border-top: 0.4px solid #FFF2E7;
+    border-top: 0.4px solid #FFF2E7; 
 }
 
 .Conteudo-principal {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
-}
+    margin:0px;
+    }
 
 .Conteudo-principal-escrito {
     display: flex;
@@ -70,19 +71,28 @@ height: 72px;
 
 .Conteudo-principal-escrito-botao {
    background-color: #ecd6c4;
-   width: 180px;
-   height: 60px;
+   width: 90px;
+   height: 50px;
    border: none;
    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
    border-radius: 20px;
    font-family: 'Sarala', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 13px;
     color: #2F2325;
 }
 
 .Conteudo-principal-escrito-botao:hover {
 background-color: rgba(236, 214, 196, 0.53);
+}
+
+.Conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .Conteudo-principal-imagem {
@@ -99,3 +109,54 @@ background-color: rgba(236, 214, 196, 0.53);
     display: block;
     margin: 0 auto;
 }
+
+div{
+margin:5px; 
+padding:10px;
+margin-top: 10px;
+margin-left:0px;
+margin-right:-70px;
+padding-left:0px;
+padding-right:0px;
+float: left;
+display: grid;
+grid-template-columns: auto auto;
+vertical-align: middle;
+line-height: 30px;
+grid-column-gap: 4px;
+grid-row-gap: 5px;
+    }    
+
+.PRO{
+font-size: 20px;
+position: relative;
+right: 100px;
+background-color:none;
+color:rgba(249, 249, 238, 0.834);
+width: 190px;
+height: 30px;
+display: grid;
+justify-content: center;
+grid-template-columns: auto auto auto auto auto;
+}
+
+label {
+    cursor: default;
+  }
+
+  @keyframes anima {
+    0%{
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.06);
+    }
+  }
+
+  .Conteudo-principal-escrito-botao:hover{
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
